@@ -75,7 +75,7 @@ def tokenize_dataset(dataset, tokenizer, n, all_until_n = True):
 
 
 def load_tokenized_data(processed_path, type_str, x_val, y_val, tokenizer, n, token_scheme, all_until_n = True):
-	val_file_name = '_'.join([type_str, token_scheme, str(n)])+'.p'
+	val_file_name = '_'.join([type_str, token_scheme, str(n), str(all_until_n)])+'.p'
 	full_file_path = os.path.join(processed_path, val_file_name) ;
 	
 	if(type_str == 'tokens'):
